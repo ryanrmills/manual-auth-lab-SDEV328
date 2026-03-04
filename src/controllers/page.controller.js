@@ -3,11 +3,14 @@ const homePage = (req, res) => {
 };
 
 const dashboardPage = (req, res) => {
+    console.log({thisIsUser: req.user});
     res.render("dashboard", { title: "Member Dashboard" });
 };
 
 const adminPage = (req, res) => {
     res.render("admin", { title: "Admin Panel" });
 };
+
+
 
 export default { homePage, dashboardPage, adminPage };
